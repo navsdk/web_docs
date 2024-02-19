@@ -143,12 +143,12 @@ int OpenFile(const char* fileName, const char* fileMode);
 
 1. 需要在include/nisdk/changelog.md中，根据更新日期，标明接口变化内容。功能实现。
 2. 需要在git提交日志中，标明变更类型，变更简介，变更详情。
-> feat: 新增产品功能
-> fix: 修复bug
-> docs: 文档变更
-> style: 格式调整
-> refactor: 代码重构
-> perf: 性能优化
-> test: 测试模块
-> build: 编译环境
+> feat: 新增产品功能  
+> fix: 修复bug  
+> docs: 文档变更  
+> style: 格式调整  
+> refactor: 代码重构  
+> perf: 性能优化  
+> test: 测试模块  
+> build: 编译环境  
 > revert: 代码回退
