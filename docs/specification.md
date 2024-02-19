@@ -137,7 +137,7 @@ int OpenFile(const char* fileName, const char* fileMode);
 1. 接口设计时，尽可能通过const限制接口的使用。
 2. 编译时，应当保证无WARNING信息。
 3. namespace不缩进，类内public, private, protected不缩进。
-4. 注释遵守javadoc规范，能够被doxygen工具识别。格式参考doc/comment_format.md。
+4. 注释遵守doxygen的格式规范。
 
 ### 四、Git提交说明
 
