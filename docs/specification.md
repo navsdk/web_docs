@@ -97,43 +97,40 @@ int OpenFile(const char* fileName, const char* fileMode);
 2. 类名采用“大驼峰”形式，首字母和单词字母均大写。例如：MapView，MapService
 3. 类函数名采用“大驼峰”形式，首字母和单词字母均大写。使用动词+宾语形式命名。例如：DoRender()，GetValue()
 4. 枚举名首字母大写，后缀Enum，枚举值使用全大写字母，以下划线分隔。例如：SexEnum.MALE
-5. 纯虚类以I开头，实现类以Impl结尾。例如：IMapView，MapViewImpl
-6. 返回bool类型的函数，以is / has / contains等，能够明确表明bool值意图的词语开头。例如：isVisible()，hasCharacter()
-7. 设定，取得属性的函数统一使用setXXX(), getXXX()形式。
-8. 对外接口类使用纯虚类。
-9. 对外文件以ni_开头。例如：ni_map_view.h
-10. 测试类，以待测试类开头，Test结尾。例如：MapViewTest
-11. 增删改查等数据接口操作，使用以下动词形式。可以在动词后追加宾语。返回bool代表操作是否成功。
+5. 返回bool类型的函数，以is / has / contains等，能够明确表明bool值意图的词语开头。例如：isVisible()，hasCharacter()
+6. 设定，取得属性的函数统一使用setXXX(), getXXX()形式。
+7. 对外接口类使用纯虚类。
+8. 对外文件以ni_开头。例如：ni_map_view.h
+9.  测试类，以待测试类开头，Test结尾。例如：MapViewTest
+10. 增删改查等数据接口操作，使用以下动词形式。可以在动词后追加宾语。返回bool代表操作是否成功。
+> 创建：Obj\* create();  
+> 添加：bool add(Obj o), bool add(int index, Obj\* o);  
+> 删除：bool remove(int index), bool remove(Obj\* o);  
+> 更新：bool set(int index, Obj\* o);  
+> 取得：Obj\* get(int index);  
+> 查找：int find(*Obj o);  
+> 数量：int count();  
 
-- 创建：Obj* Create();
-- 添加：bool Add(Obj o), bool Add(int index, Obj* o);
-- 删除：bool Remove(int index), bool Remove(Obj* o);
-- 更新：bool Set(int index, Obj* o);
-- 取得：Obj* Get(int index);
-- 查找：int Find(*Obj o);
-- 数量：int Count();
+11.  对仗词语标准
+> add / remove  
+> increment / decrement  
+> open / close  
+> begin / end  
+> insert / delete  
+> show / hide  
+> create / destroy  
+> lock / unlock  
+> source / target  
+> first / last  
+> min / max  
+> start / stop  
+> set / get  
+> next / previous  
+> up / down  
+> old / new  
+> init / uninit  
 
-12. 对仗词语标准
-
-- add / remove
-- increment / decrement
-- open / close
-- begin / end
-- insert / delete
-- show / hide
-- create / destroy
-- lock / unlock
-- source / target
-- first / last
-- min / max
-- start / stop
-- set / get
-- next / previous
-- up / down
-- old / new
-- init / uninit
-
-13. 限定词后置。计算最大值，最小值，最佳值，平均值，总计，数量等数据时，变量以Max，Min，Best，Average，Total，Count作为结尾。例如：distanceMax，priceTotal，routeResultBest
+12.  限定词后置。计算最大值，最小值，最佳值，平均值，总计，数量等数据时，变量以Max，Min，Best，Average，Total，Count作为结尾。例如：distanceMax，priceTotal，routeResultBest
 
 ### 三、编码风格
 
@@ -144,15 +141,14 @@ int OpenFile(const char* fileName, const char* fileMode);
 
 ### 四、Git提交说明
 
-1. 需要在include/nisdk/changelog.md中，根据更新日期，标明接口变化内容。功能实现
+1. 需要在include/nisdk/changelog.md中，根据更新日期，标明接口变化内容。功能实现。
 2. 需要在git提交日志中，标明变更类型，变更简介，变更详情。
-
-- feat: 新增产品功能
-- fix: 修复bug
-- docs: 文档变更
-- style: 格式调整
-- refactor: 代码重构
-- perf: 性能优化
-- test: 测试模块
-- build: 编译环境
-- revert: 代码回退
+> feat: 新增产品功能
+> fix: 修复bug
+> docs: 文档变更
+> style: 格式调整
+> refactor: 代码重构
+> perf: 性能优化
+> test: 测试模块
+> build: 编译环境
+> revert: 代码回退
